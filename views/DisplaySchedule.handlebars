@@ -1,0 +1,91 @@
+
+<div>
+    <h2> All Employee Schedules </h2>
+</div>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+    <th>Sunday</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>
+  {{#each result}}
+      {{#eq  this.dayofweek "Monday" }}
+        <div><a href="/users/employee/{{this.userId}}">{{this.surname}}  {{this.firstname}}</a></div>
+        <div class="timedisp"> {{this.starttime}} - {{this.endtime}}</div>
+      {{/eq}}
+    
+    {{/each}}
+  </td>
+  
+   <td>
+   {{#each result}}
+     {{#eq "Tuesday" this.dayofweek }}
+      <div><a href="/users/employee/{{this.userId}}">{{this.surname}}  {{this.firstname}}</a></div>
+        <div class="timedisp"> {{this.starttime}} - {{this.endtime}}</div>
+     {{/eq}}
+     {{/each}}
+   </td>
+   
+   <td>
+   {{#each result}}
+     {{#eq "Wednesday" this.dayofweek }}
+        <div><a href="/users/employee/{{this.userId}}">{{this.surname}}  {{this.firstname}}</a></div>
+        <div class="timedisp"> {{this.starttime}} - {{this.endtime}}</div>
+     {{/eq}}
+     {{/each}}
+     </td>    
+     <td>
+  {{#each result}}
+      {{#eq  this.dayofweek "Thursday" }}
+        <div><a href="/users/employee/{{this.userId}}">{{this.surname}}  {{this.firstname}}</a></div>
+        <div class="timedisp"> {{this.starttime}} - {{this.endtime}}</div>
+      {{/eq}}
+    
+    {{/each}}
+  </td>
+  
+   <td>
+   {{#each result}}
+     {{#eq "Friday" this.dayofweek }}
+      <div><a href="/users/employee/{{this.userId}}">{{this.surname}}  {{this.firstname}}</a></div>
+        <div class="timedisp"> {{this.starttime}} - {{this.endtime}}</div>
+     {{/eq}}
+     {{/each}}
+   </td>
+   
+   <td>
+   {{#each result}}
+     {{#eq "Saturday" this.dayofweek }}
+      <div style="background-color: lightblue" > 
+        <div><a href="/users/employee/{{this.userId}}">{{this.surname}}  {{this.firstname}}</a></div>
+        <div class="timedisp"> {{this.starttime}} - {{this.endtime}}</div>
+     </div>
+     {{/eq}}
+     {{/each}}
+     </td>    
+   <td>
+   {{#each result}}
+     {{#eq "Sunday" this.dayofweek }}
+      <div style="background-color: lightblue" > 
+        <div><a href="/users/employee/{{this.userId}}">{{this.surname}}  {{this.firstname}}</a></div>
+        <div class="timedisp"> {{this.starttime}} - {{this.endtime}}</div>
+     </div>
+     {{/eq}}
+     {{/each}}
+  </td>    
+</tr>
+</tbody>
+</table>
+</div>
+
+
